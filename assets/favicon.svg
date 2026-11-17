@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="majGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7052ff"/>
+      <stop offset="50%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded Box -->
+  <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#majGrad)"/>
+  
+  <!-- Code Symbol </> -->
+  <!-- Left Bracket < -->
+  <path d="M 46 44 L 28 64 L 46 84" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Slash / -->
+  <line x1="72" y1="36" x2="56" y2="92" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+  
+  <!-- Right Bracket > -->
+  <path d="M 82 44 L 100 64 L 82 84" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
