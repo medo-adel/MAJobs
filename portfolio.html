@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-title="nav_portfolio">أعمالنا ومشاريعنا | MAJobs - م. محمد عادل</title>
+    
+    <meta name="description" content="استعرض سابقة أعمال ومشاريع MAJobs: منصات التجارة الإلكترونية، تطبيقات الموبايل، والأنظمة السحابية المخصصة.">
+    <meta name="author" content="Mohamed Adel">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="site-navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <span>MA<span class="brand-accent">Jobs</span></span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا البرمجية</a>
+                <a href="portfolio.html" class="nav-link active" data-i18n="nav_portfolio">أعمالنا ومشاريعنا</a>
+                <a href="about.html" class="nav-link" data-i18n="nav_about">من نحن</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">تواصل معنا</a>
+            </div>
+
+            <div class="nav-actions">
+                <button type="button" class="lang-toggle-btn" aria-label="Toggle Language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="lang-toggle-text">English</span>
+                </button>
+
+                <a href="https://wa.me/201027932658?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%8A%D8%A7%20%D8%A8%D8%B4%D9%85%D9%87%D9%86%D8%AF%D8%B3%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9%D9%83%D9%85%20%D8%A7%D9%84%D8%B3%D8%A7%D8%A8%D9%82%D8%A9." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span data-i18n="nav_cta">استشارة مجانية</span>
+                </a>
+
+                <button class="mobile-toggle" aria-label="Open Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="hero-section" style="padding-bottom: 2rem;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge animate-on-scroll">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span data-i18n="portfolio_badge">أحدث مشاريعنا</span>
+                </div>
+
+                <h1 class="hero-title animate-on-scroll">
+                    <span class="text-gradient" data-i18n="portfolio_title">قصص نجاح حقيقية نفخر ببنائها</span>
+                </h1>
+
+                <p class="hero-subtitle animate-on-scroll" data-i18n="portfolio_desc">
+                    نماذج من أعمالنا وتطبيقاتنا التي حققت لعملائنا نمواً ومبيعات ملموسة.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PORTFOLIO SHOWCASE ================= -->
+    <section class="section" style="padding-top: 1rem;">
+        <div class="container">
+            <!-- Filter Controls -->
+            <div class="filter-container">
+                <button type="button" class="filter-btn portfolio-filter-btn active" data-filter="all" data-i18n="filter_all">جميع المشاريع</button>
+                <button type="button" class="filter-btn portfolio-filter-btn" data-filter="ecommerce" data-i18n="filter_ecommerce">المتاجر الإلكترونية</button>
+                <button type="button" class="filter-btn portfolio-filter-btn" data-filter="web" data-i18n="filter_web">تطبيقات الويب</button>
+                <button type="button" class="filter-btn portfolio-filter-btn" data-filter="mobile" data-i18n="filter_mobile">تطبيقات الموبايل</button>
+                <button type="button" class="filter-btn portfolio-filter-btn" data-filter="design">UI/UX Design</button>
+                <button type="button" class="filter-btn portfolio-filter-btn" data-filter="marketing" data-i18n="filter_marketing">السيو والتسويق</button>
+            </div>
+
+            <!-- Dynamic Portfolio Grid -->
+            <div id="portfolio-grid" class="portfolio-grid"></div>
+        </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="badge">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>هل لديك فكرة مشروع ترغب بتنفيذها؟</span>
+                </div>
+                <h2 data-i18n="cta_title">ابدأ مشروعك البرمجي اليوم مع م. محمد عادل</h2>
+                <p data-i18n="cta_desc">تواصل معنا مباشرة عبر الواتساب على الرقم 01027932658 للحصول على استشارة فنية مجانية وتقدير دقيق للتكلفة والوقت.</p>
+                
+                <div class="cta-actions">
+                    <a href="https://wa.me/201027932658?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85.%20%D9%85%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D8%B3%D8%A7%D8%A8%D9%82%D8%A9%20%D8%A3%D8%B9%D9%85%D8%A7%D9%84%D9%83%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86%20%D9%85%D8%B9%D9%83." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span data-i18n="cta_whatsapp_btn">تحدث مع البشمهندس محمد (واتساب)</span>
+                    </a>
+                    <a href="tel:+201027932658" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-phone"></i>
+                        <span data-i18n="cta_call_btn">اتصل هاتفياً الآن</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand">
+                        <div class="brand-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span>MA<span class="brand-accent">Jobs</span></span>
+                    </a>
+                    <p data-i18n="footer_desc">MAJobs - شركة رائدة في تطوير وتصميم المواقع والمتاجر والتطبيقات وحلول التسويق الرقمي والسيو بقيادة م. محمد عادل.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title" data-i18n="footer_links_quick">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">خدماتنا</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav_portfolio">أعمالنا</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">من نحن</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title" data-i18n="footer_links_services">خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">تطوير الويب المخصص</a></li>
+                        <li><a href="services.html">تطبيقات الموبايل</a></li>
+                        <li><a href="services.html">متاجر سلة وشوبيفاي</a></li>
+                        <li><a href="services.html">تصميم UI/UX</a></li>
+                        <li><a href="services.html">تحسين السيو والتسويق</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title" data-i18n="footer_contact_direct">تواصل مباشر</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+201027932658" style="direction: ltr;">01027932658</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/201027932658" target="_blank" rel="noopener noreferrer" style="direction: ltr;">+20 102 793 2658</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:contact@majobs.com">contact@majobs.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div data-i18n="footer_rights">جميع الحقوق محفوظة © 2026 MAJobs - برمجة وتطوير م. محمد عادل (هاتف: 01027932658)</div>
+                <div>Software Engineering & Digital Solutions</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

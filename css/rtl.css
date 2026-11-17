@@ -1,0 +1,42 @@
+/* ========================================================
+   MAJobs - Bi-directional Polish (RTL & LTR)
+   Software Engineer: Mohamed Adel | Phone: 01027932658
+   ======================================================== */
+
+/* General Bi-directional adjustments */
+html[dir="ltr"] .fa-arrow-left {
+    transform: rotate(180deg);
+}
+
+html[dir="rtl"] .fa-arrow-right {
+    transform: rotate(180deg);
+}
+
+/* Floating WhatsApp placement */
+html[dir="rtl"] .floating-wa-container {
+    right: 2rem;
+    left: auto;
+}
+
+html[dir="ltr"] .floating-wa-container {
+    right: 2rem;
+    left: auto;
+}
+
+/* Ensure numbers & phones always stay LTR readable */
+.phone-number,
+.contact-info-value,
+.footer-contact-item a[href^="tel"],
+.footer-contact-item a[href*="wa.me"] {
+    direction: ltr !important;
+    unicode-bidi: embed;
+}
+
+/* Form selects in RTL/LTR */
+html[dir="rtl"] .form-select {
+    background-position: left 1rem center;
+}
+
+html[dir="ltr"] .form-select {
+    background-position: right 1rem center;
+}
